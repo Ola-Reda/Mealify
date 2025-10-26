@@ -1,0 +1,145 @@
+/*************navbar*************/
+
+/*************navbar*************/
+/*************main*************/
+@media screen and (min-width: 1200px) {
+    main {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    main .contanier {
+        flex-direction: column-reverse;
+        gap: 3.125rem;
+    }
+
+    main .contanier > div {
+        width: 100%;
+        text-align: center;
+    }
+
+    main .btns-group {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main .btns-group {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    main .btns-group .contact-btn {
+        border-radius: 25px;
+    }
+}
+/*************main*************/
+/*************section chefs*************/
+@media screen and (max-width: 995px) {
+    .chefs .boxs .box {
+        width: calc((100% - var(--gap)) / 2);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .chefs .boxs .box {
+        width: 100% ;
+    }
+}
+/*************section chefs*************/
+/*************section gallery*************/
+@media screen and (max-width: 1400px) {
+    .gallery .boxs {
+        height: 1050px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .gallery .boxs {
+        height: 900px;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .gallery .boxs {
+        height: 1600px;
+    }
+
+    .gallery .boxs picture {
+        width: calc(calc(100% - var(--gap)) / 2);
+    }
+
+    .gallery .pizza {
+        order: 1;
+    }
+
+    .gallery .Levitation-pizza {
+        order: 3;
+    }
+
+    .gallery .Beef {
+        order: 5;
+    }
+
+    .gallery .Frittata {
+        order: 4;
+    }
+
+    .gallery .Burger {
+        order: 2;
+    }
+
+    .gallery .Chicken {
+        order: 6;
+    }
+
+    .gallery .kebab {
+        order: 7;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery .boxs {
+        height: auto;
+    }
+
+    .gallery .boxs picture {
+        width: 100% ;
+    }
+}
+/*************section gallery*************/
+/*************section contact*************/
+@media screen and (max-width: 995px) {
+    .contact .contact-details .inputs input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact .contact-content .box {
+        width: 100%;
+    }
+}
+/*************section contact*************/
+/*************footer*************/
+@media screen and (max-width: 1200px) {
+    footer .about-box, footer .contact-box {
+        width: calc(calc(100% - var(--gap)) / 2);
+        order: 1;
+    }
+
+    footer .Subscribe-box {
+        width: 100%;
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer .about-box, footer .contact-box, footer .Subscribe-box  {
+        width: 100%;
+        order: 0;
+    }
+}
+/*************footer*************/
+

@@ -1,0 +1,34 @@
+/* body:has(.mode input:checked) {
+    background: red;
+} */
+
+body:has(.mode input:checked) .light {
+    display: block;
+}
+
+body:has(.mode input:checked) .dark {
+    display: none;
+}
+
+:root:has(.mode input:checked) {
+    --main-color: #c17e1f;
+    --secondary-color: #fff;
+    --gray-color: #252525;
+    --text-color: #9f9f9f;
+    --bg-color: #171717;
+    --main-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Amatic SC", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+    --padding-block: 60px; 
+}
+
+
+body:not(:has(:target)):has(.mode input:checked) .home-link,
+body:has(.home:target):has(.mode input:checked) .home-link,
+body:has(.chefs:target):has(.mode input:checked) .chefs-link,
+body:has(.gallery:target):has(.mode input:checked) .gallery-link,
+body:has(.contact:target):has(.mode input:checked) .contact-link {
+    color: #fff !important;
+}  
