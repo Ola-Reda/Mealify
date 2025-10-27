@@ -1,4 +1,4 @@
-# yallaparking
+# Mealify
 
 ![Capture](https://github.com/user-attachments/assets/3c64b5b4-a376-4244-80f1-b1c44f11264b)
 
