@@ -4,13 +4,11 @@
 
 ## Live Demo
 
-https://ola-reda.github.io/yallaparking/
+https://ola-reda.github.io/Mealify/
 
 ### About
 
-yallaparking helps you to park your car
-
-the project was created using HTML, CSS, Bootstrap5 and JS
+the project was created using HTML and CSS
 
 ### Installation
 
