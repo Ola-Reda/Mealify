@@ -1,5 +1,28 @@
 /*************navbar*************/
+@media (max-width: 1200px) {
+    nav .close {
+        display: block;
+        align-self: flex-end;
+    }
 
+    nav .navs {
+        display: block;
+    }
+
+    nav .navlinks {
+        position: absolute;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 350px;
+        z-index: 99999;
+        transform: translateX(100%);
+        padding: 20px;
+    }
+}
 /*************navbar*************/
 /*************main*************/
 @media screen and (min-width: 1200px) {
@@ -139,6 +162,12 @@
     footer .about-box, footer .contact-box, footer .Subscribe-box  {
         width: 100%;
         order: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer .Subscribe-box form {
+        flex-direction: column;
     }
 }
 /*************footer*************/

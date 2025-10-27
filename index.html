@@ -18,9 +18,12 @@
         <nav>
             <div class="contanier">
                 <div class="logo">
-                    <a href="#">Mealify</a>
+                    <a href="index.html">Mealify</a>
                 </div>
-                <ul class="links">
+                <ul class="navlinks" id="navlinks">
+                    <a href="index.html" class="close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
                     <li><a href="#home" class="home-link">Home</a></li>
                     <li><a href="#chefs" class="chefs-link">Chefs</a></li>
                     <li><a href="#gallery" class="gallery-link">Gallery</a></li>
@@ -32,9 +35,9 @@
                         <label for="mode" class="light"><i class="fa-solid fa-sun"></i></label>
                         <input type="checkbox" name="mode" id="mode" hidden>
                     </div>
-                    <div class="navs">
+                    <a href="#navlinks" class="navs">
                         <i class="fa-solid fa-bars"></i>
-                    </div>
+                    </a>
                 </div>
             </div>
         </nav>

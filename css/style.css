@@ -3,7 +3,11 @@
     --secondary-color: #37373f;
     --gray-color: #eee;
     --text-color: #7f7f90;
+    --txt-color: #212529;
     --bg-color: #fff;
+    --body-color: #fff;
+    --bg-hover-color: #E61414;
+    --btn-color: #fff;
     --main-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -30,7 +34,7 @@ html {
 
 body {
     font-family: var(--main-font);
-    background: var(--bg-color);
+    background: var(--body-color);
 }
 
 .contanier {
@@ -57,7 +61,7 @@ ul {
 }
 
 section {
-    padding-block: 2.25rem;
+    padding-block:var(--padding-block);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,6 +82,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     margin-bottom: 2rem;
     font-family: var(--font-primary) !important;
+    color: var(--txt-color);
 }
 
 .heading span {
@@ -105,7 +110,7 @@ nav .logo a {
     font-size: 1.875rem;
     font-weight: 700;
     position: relative;
-    color: #212529;
+    color: var(--txt-color);
 }
 
 nav .logo a::after {
@@ -113,13 +118,13 @@ nav .logo a::after {
     color: var(--main-color);
 }
 
-nav .links {
+nav .navlinks {
     display: flex;
-    align-items: center;
     gap: 30px;
+    transition: .6s;
 }
 
-nav .links a {
+nav .navlinks a {
     font-size: 17px;
     font-weight: 600;
     color: var(--text-color);
@@ -127,11 +132,11 @@ nav .links a {
     transition: color .5s ease-in;
 }
 
-nav .links a:hover {
+nav .navlinks a:hover {
     color: rgb(0, 0, 0);
 }
 
-nav .links a::after {
+nav .navlinks a::after {
     content: "";
     position: absolute;
     background-color: var(--main-color);
@@ -142,7 +147,7 @@ nav .links a::after {
     transition: width .5s ease-in;
 }
 
-nav .links a:hover::after {
+nav .navlinks a:hover::after {
     width: 100%;
 }
 
@@ -177,26 +182,21 @@ nav .mode .light {
     display: none;
 }
 
+nav .close {
+    display: none;
+}
+
 nav .navs {
     display: none;
 }
 
-@media (max-width: 1200px) {
-    nav .navs {
-        display: block;
-    }
+.navlinks:target {
+    transform: translateX(0px);
+}
 
-    nav .links {
-        position: absolute;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        top: 0px;
-        right: 0px;
-        height: 100%;
-        width: 350px;
-        display: none;
-    }
+body:has(.navlinks:target) nav {
+    height: 100vh !important;
+    background-color: #fafafa69;
 }
 /*************navbar*************/
 /*************main*************/
@@ -239,18 +239,18 @@ main .btns-group {
 
 main .btns-group .contact-btn {
     background-color: var(--main-color);
-    color: white;
+    color: var(--btn-color);
     padding: 10px 25px;
     border-radius: 0px 25px 25px 25px;
     transition: background-color .5s ease-in;
 }
 
 main .btns-group .contact-btn:hover {
-    background-color: #E61414;
+    background-color: var(--bg-hover-color);
 }
 
 main .btns-group .video-btn {
-    color: #212529;
+    color: var(--txt-color);
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -264,7 +264,7 @@ main .btns-group .video-btn .icon {
     justify-content: center;
     width: 3.5rem;
     height: 3.5rem;
-    background-color: white;
+    background-color: var(--bg-color);
     padding: 10px;
     border-radius: 50%;
     position: relative;
@@ -356,10 +356,11 @@ main .image img:hover {
 .chefs .boxs .content {
     padding: 25px;
     padding-top: 10px;
+    background-color: var(--bg-color);
 }
 
 .chefs .boxs .content h3 {
-    color: #212529;
+    color: var(--txt-color);
     font-size: 1.1875rem;
     font-weight: 600;
 }
@@ -511,7 +512,7 @@ main .image img:hover {
 }
 
 .contact .contact-content .box p {
-    color: #212529;
+    color: var(--txt-color);
 }
 
 .contact .contact-content .box p span {
@@ -519,6 +520,7 @@ main .image img:hover {
 }
 
 .contact .contact-details {
+    background-color: var(--bg-color);
     box-shadow: 0 0 1.875rem #00000014;
     padding: 1.25rem;
 }
@@ -569,7 +571,7 @@ main .image img:hover {
 .contact .contact-details button {
     margin: auto;
     background-color: var(--main-color);
-    color: white;
+    color: var(--btn-color);
     padding: 14px 40px;
     margin-top: 25px;
     font-size: 15px;
@@ -581,7 +583,7 @@ main .image img:hover {
 }
 
 .contact .contact-details button:hover {
-    background-color: #E61414;
+    background-color: var(--bg-hover-color);
 }
 
 @media screen and (max-width: 995px) {
@@ -692,7 +694,7 @@ footer .Subscribe-box form input {
 
 footer .Subscribe-box button {
     background-color: var(--main-color);
-    color: white;
+    color: var(--btn-color);
     padding: 10px;
     outline: none;
     border: none;
@@ -706,7 +708,7 @@ footer .Subscribe-box button i {
 }
 
 footer .Subscribe-box button:hover {
-    background-color: #E61414;
+    background-color: var(--bg-hover-color);
 }
 
 footer .Subscribe-box ul {

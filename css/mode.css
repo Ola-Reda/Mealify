@@ -1,9 +1,6 @@
-/* body:has(.mode input:checked) {
-    background: red;
-} */
-
 body:has(.mode input:checked) .light {
     display: block;
+    color: white;
 }
 
 body:has(.mode input:checked) .dark {
@@ -15,13 +12,11 @@ body:has(.mode input:checked) .dark {
     --secondary-color: #fff;
     --gray-color: #252525;
     --text-color: #9f9f9f;
+    --txt-color: #fff;
     --bg-color: #171717;
-    --main-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-primary: "Amatic SC", sans-serif;
-    --font-secondary: "Inter", sans-serif;
-    --padding-block: 60px; 
+    --body-color: #202020;
+    --bg-hover-color: #d78c23;
+    --btn-color: #171717;
 }
 
 
@@ -32,3 +27,33 @@ body:has(.gallery:target):has(.mode input:checked) .gallery-link,
 body:has(.contact:target):has(.mode input:checked) .contact-link {
     color: #fff !important;
 }  
+
+body:has(.mode input:checked) nav .links a:hover {
+    color: #fff;
+}
+
+body:has(.mode input:checked) .navs i {
+    color: white;
+}
+/*************main*************/
+body:has(.mode input:checked) main p {
+    color: var(--text-color);
+}
+/*************main*************/
+
+/*************chefs*************/
+body:has(.mode input:checked) .chefs .boxs .box picture::before {
+    background-image: url(../images/team-shape-dark.svg);
+}
+/*************chefs*************/
+
+
+/*************contact*************/
+body:has(.mode input:checked) .contact .contact-content .box {
+    background-color: #0d0d0d;
+}
+
+body:has(.mode input:checked) .contact .contact-content .box i {
+    color: #171717;
+}
+/*************contact*************/
